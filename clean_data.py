@@ -6,7 +6,7 @@ import os
 def validate_path(file_path):
     if not os.path.exists(file_path):
         raise FileNotFoundError(f"File not found: {file_path}")
-    if not file_path.endswith((".csv", '.xlsx', '.json')):
+    if not file_path.lower().endswith((".csv", '.xlsx', '.json')):
         raise ValueError("Unsupported file format. Use CSV, Excel, or JSON.")
 
 
